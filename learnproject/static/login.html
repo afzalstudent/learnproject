@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        h2,form {text-align:center;}
+        body {  background-image:url( {% static 'images/Nikons.jpg' %} );}
+    </style>
+</head>
+<body style="">
+<h2>login</h2>
+<form action="login" method="post">
+{% csrf_token %}
+    <input type="text", name="username", placeholder="enter username"><br>
+    <input type="password", name="password", placeholder="enter your password"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
